@@ -1,11 +1,11 @@
 public class Objeto {
 
     private int peso;
-    private int beneficio;
+    private int valor;
 
-    public Objeto(int peso, int beneficio) {
+    public Objeto(int peso, int valor) {
         this.peso = peso;
-        this.beneficio = beneficio;
+        this.valor = valor;
     }
 
     public int getPeso() {
@@ -16,12 +16,21 @@ public class Objeto {
         this.peso = peso;
     }
 
-    public int getBeneficio() {
-        return beneficio;
+    public int getValor() {
+        return valor;
     }
 
-    public void setBeneficio(int beneficio) {
-        this.beneficio = beneficio;
+    public void setValor(int valor) {
+        this.valor = valor;
+    }
+
+    @Override
+    public int hashCode(){
+        final int prime = 31;
+        int result = 1;
+        result = prime * result + valor;
+        result = prime * result + peso;
+        return result;
     }
 
     @Override
@@ -43,7 +52,7 @@ public class Objeto {
             return false;
         }
 
-        if (this.beneficio != other.beneficio) {
+        if (this.valor != other.valor) {
             return false;
         }
 
@@ -51,6 +60,6 @@ public class Objeto {
     }
 
     public String toString() {
-        return "Peso: " + peso + ", " + "beneficio: " + beneficio;
+        return "Peso: " + peso + ", " + "beneficio: " + valor;
     }
 }
