@@ -19,11 +19,11 @@ public class Mochila {
         this.capacidadM = capacidadM;
     }
 
-    public Objeto[] getElementos() {
+    public Objeto[] getObjetos() {
         return objetos;
     }
 
-    public void setElementos(Objeto[] objetos) {
+    public void setObjetos(Objeto[] objetos) {
         this.objetos = objetos;
     }
 
